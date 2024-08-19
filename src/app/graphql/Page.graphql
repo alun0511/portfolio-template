@@ -1,0 +1,5 @@
+query Page($eq: String = "") {
+  page(filter: { url: { eq: $eq } }) {
+    id
+  }
+}
