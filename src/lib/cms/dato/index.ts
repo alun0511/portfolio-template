@@ -3,17 +3,6 @@ import { cache } from "react";
 
 const endpoint = "https://graphql.datocms.com/";
 
-// const cacheConfig = (
-//   nextFetchRequestConfigOverride: NextFetchRequestConfigOverride = {}
-// ): NextFetchRequestConfig =>
-//   process.env.NODE_ENV === "production"
-//     ? nextFetchRequestConfigOverride.production || {
-//         // This should probably be set on the specific request, but graphql-request doesn't
-//         // currently support that. See https://github.com/jasonkuhrt/graphql-request/issues/537
-//         tags: ["cms"],
-//       }
-//     : nextFetchRequestConfigOverride.development || { revalidate: 30 };
-
 type NextFetchRequestConfigOverride = {
   development?: NextFetchRequestConfig;
   production?: NextFetchRequestConfig;

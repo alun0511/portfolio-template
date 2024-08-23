@@ -1,0 +1,6 @@
+query HomePage {
+  homePage {
+    id
+    title
+  }
+}

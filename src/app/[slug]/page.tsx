@@ -16,7 +16,7 @@ import { AllPagesDocument, PageDocument } from "@/types/graphql";
 export default async function DynamicPage({
   params,
 }: {
-  params: { slug: string[]; lang: string };
+  params: { slug: string[] };
 }) {
   const data = await apiClient().request({
     document: PageDocument,
@@ -25,11 +25,16 @@ export default async function DynamicPage({
     },
   });
 
-  console.log(data.page);
+  // if (!data.page) {
+  //   return { notFound: true };
+  // }
+
+  console.log("dynamic page data:", data);
+  console.log("params.slug:", params.slug);
 
   return (
     <main className={styles.main}>
-      <h1>{data.page?.url}</h1>
+      <h1>{data.page?.slug}</h1>
     </main>
   );
 }

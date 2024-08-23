@@ -1,0 +1,18 @@
+fragment LinkFragment on LinkRecord {
+  id
+  linkTitle {
+    ... on ShowcaseRecord {
+      id
+    }
+    ... on PageRecord {
+      id
+      slug
+    }
+    ... on HomePageRecord {
+      id
+      title
+    }
+  }
+  externalLink
+  text
+}

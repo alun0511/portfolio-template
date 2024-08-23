@@ -1,13 +1,13 @@
 query Page($eq: String = "") {
-  page(filter: { url: { eq: $eq } }) {
+  page(filter: { slug: { eq: $eq } }) {
     id
-    url
+    slug
   }
 }
 
 query allPages {
   allPages {
     id
-    url
+    slug
   }
 }
