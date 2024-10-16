@@ -1,4 +1,4 @@
-fragment LinkFragment on LinkRecord {
+fragment Link on LinkRecord {
   id
   linkTitle {
     ... on ShowcaseRecord {

@@ -2,6 +2,14 @@ query Page($eq: String = "") {
   page(filter: { slug: { eq: $eq } }) {
     id
     slug
+    sections {
+      ... on ButtonRecord {
+        id
+      }
+      ... on LinkRecord {
+        id
+      }
+    }
   }
 }
 
